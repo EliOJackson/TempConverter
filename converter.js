@@ -34,14 +34,14 @@ function determineConverter (clickEvent) {
     }
 };
 
-function toFahrenheit (newTemp) {
-    let newTemp = ((temp * 1.8) + 32);
-    newTemp.innerHTML = newTemp;
-    print(newTemp);
+function toFahrenheit (temp) {
+    let newTemp = ((temp.value * 1.8) + 32);
+    convertedTemp.innerHTML = newTemp;
+  
 }
 
 function toCelsius (temp) {
-    let newTemp = ((temp - 32) * .5556);
+    let newTemp = ((temp.value - 32) * .5556);
     convertedTemp.innerHTML = newTemp;
 }
 
