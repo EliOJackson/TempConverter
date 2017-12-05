@@ -14,22 +14,22 @@
 let temp = document.getElementById("temperature");
 let newTemp = document.getElementById("convertedTemp");
 
-let button = document.getElementById("conert");
+let button = document.getElementById("convert");
 let clearButton = document.getElementById("clear");
 
 let toF = document.getElementById("fahrenheit");
-let toC =document.getElementById("celsius");
+let toC =   document.getElementById("celsius");
 
 button.addEventListener("click", determineConverter);
 clearButton.addEventListener("click", clear);
 
-function toFahrenheit (temp) {
-    return (temp * 1.8) + 32
+function toFahrenheit (newTemp) {
+    let newTemp = ((temp * 1.8) + 32);
 
 }
 
 function toCelsius (temp) {
-    return (temp - 32) * .5556
+    let newTemp = ((temp - 32) * .5556);
 }
 
 console.log(toCelsius(20))
