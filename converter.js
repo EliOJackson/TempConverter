@@ -23,23 +23,29 @@ let toC =   document.getElementById("celsius");
 button.addEventListener("click", determineConverter);
 clearButton.addEventListener("click", clear);
 
-function toFahrenheit (newTemp) {
-    let newTemp = ((temp * 1.8) + 32);
-
-}
-
-function toCelsius (temp) {
-    let newTemp = ((temp - 32) * .5556);
-}
-
-console.log(toCelsius(20))
-
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
 function determineConverter (clickEvent) {
-  console.log("event", clickEvent);
+    if (toF.checked) {
+        toFahrenheit(temp);
+    } else if (toC.checked) {
+        toCelsius(temp);
+    }
+};
+
+function toFahrenheit (newTemp) {
+    let newTemp = ((temp * 1.8) + 32);
+    newTemp.innerHTML = newTemp;
+    print(newTemp);
 }
+
+function toCelsius (temp) {
+    let newTemp = ((temp - 32) * .5556);
+    convertedTemp.innerHTML = newTemp;
+}
+
+
 
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
