@@ -15,11 +15,13 @@ let temp = document.getElementById("temperature");
 let newTemp = document.getElementById("convertedTemp");
 
 let button = document.getElementById("conert");
-let clear = document.getElementById("clear");
+let clearButton = document.getElementById("clear");
 
 let toF = document.getElementById("fahrenheit");
 let toC =document.getElementById("celsius");
 
+button.addEventListener("click", determineConverter);
+clearButton.addEventListener("click", clear);
 
 function toFahrenheit (temp) {
     return (temp * 1.8) + 32
