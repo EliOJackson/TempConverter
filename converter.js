@@ -10,8 +10,15 @@
 // If the temperature is less than 32F/0C the color of the converted temperature should be blue.
 // For any other temperature, the color should be green.
 
+//assigning variables
 let temp = document.getElementById("temperature");
-let newTemp = document.getElementById("convertedTemp")
+let newTemp = document.getElementById("convertedTemp");
+
+let button = document.getElementById("conert");
+let clear = document.getElementById("clear");
+
+let toF = document.getElementById("fahrenheit");
+let toC =document.getElementById("celsius");
 
 
 function toFahrenheit (temp) {
@@ -24,8 +31,7 @@ function toCelsius (temp) {
 }
 
 console.log(toCelsius(20))
-// Get a reference to the button element in the DOM
-var button = document.getElementById("converter");
+
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
