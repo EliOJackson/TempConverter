@@ -35,17 +35,40 @@ function determineConverter (clickEvent) {
 };
 
 function toFahrenheit (temp) {
-    let newTemp = ((temp.value * 1.8) + 32);
-    convertedTemp.innerHTML = newTemp;
+    let newTemp = ((temp.value * 1.8) + 32).toFixed(1);
+    if (newTemp > 90) {
+        convertedTemp.style.color = "red";
+    }
+        else if (newTemp < 32) {
+            convertedTemp.style.color = "blue";
+        }
+        else {
+            convertedTemp.style.color = "green";
+        };
+        convertedTemp.innerHTML = newTemp;
+        
+    };
+    
   
-}
+
 
 function toCelsius (temp) {
-    let newTemp = ((temp.value - 32) * .5556);
+    let newTemp = ((temp.value - 32) * .5556).toFixed(1);
+    if (newTemp > 90) {
+        convertedTemp.style.color = "red";
+    }
+        else if (newTemp < 32) {
+            convertedTemp.style.color = "blue";
+        }
+        else {
+            convertedTemp.style.color = "green";
+        };
     convertedTemp.innerHTML = newTemp;
 }
 
-
-
-// Assign a function to be executed when the button is clicked
-button.addEventListener("click", determineConverter);
+function clear () {
+    temp.value = " ";
+    convertedTemp.innerHTML = " ";
+    document.getElementById("celsius").checked = false;
+    document.getElementById("fahrenheit").checked = false;
+}
